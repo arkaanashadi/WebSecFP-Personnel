@@ -1,0 +1,43 @@
+.card > .card-img-top {
+    resize: none;
+    height: 240px;
+    object-fit: cover;
+    max-height: 240px;
+}
+
+.search-home .row {
+    height: 100%;
+}
+
+.search-home .col-md-6 {
+    height: 100%;
+    padding: 0px;
+}
+
+.search-home .col-xs-12 {
+    height: 50%;
+    padding: 0px;
+}
+
+.search-home .card {
+    height: 100%;
+}
+
+.search-home img {
+    object-fit: cover;
+    object-position: 20%;
+    height: 100%;
+}
+
+.card-img {
+    filter: brightness(50%);
+}
+
+.search-home .btn {
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+.search-home {
+    margin: 0px;
+}

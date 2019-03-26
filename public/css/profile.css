@@ -1,0 +1,55 @@
+h1, h2, h3 {
+    text-align: center;
+}
+
+h3 {
+    color: white;
+}
+
+h2 {
+    color: #63432A;
+}
+
+.table {
+    color: #A99B91;
+}
+
+ul * {
+    color: #A99B91;
+}
+
+.info .container {
+    background-color: rgb(30, 30, 30);
+    color: #A99B91;
+}
+
+.row {
+    margin: 0px;
+}
+
+.table th, .table td {
+    border: none;
+    padding: 5px;
+}
+
+.table td, .table th {
+    border: none;
+    padding: 5px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.col-md-6 {
+    background-color: rgb(30, 30, 30);
+}
+
+.col-md-6 .container {
+    color: #A99B91;
+}
+
+.col-md-4 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
