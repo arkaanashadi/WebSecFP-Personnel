@@ -40,7 +40,7 @@
                                     @if ($musician->username == Session::get('username'))
                                         <h5 class="card-title"><a style="color: White;" href="musician">{{ $musician->username }}</a></h5>
                                     @else
-                                        <h5 class="card-title"><a style="color: White;" href="{{ route('profile.show',$musician->username) }}">{{ $band->username }}</a></h5>
+                                        <h5 class="card-title"><a style="color: White;" href="{{ route('profile.show',$musician->username) }}">{{ $musician->username }}</a></h5>
                                     @endif
                                     <dl class="row">
 
