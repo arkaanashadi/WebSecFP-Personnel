@@ -3,7 +3,7 @@
     <head>
         <title>Personnel • {{ $profile -> username }}</title>
         @include('layout.partials.head')
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/profile.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/profile.css') }}">
     </head>
     <body>
         <div class="container-fluid d-flex w-100 h-100 flex-column">

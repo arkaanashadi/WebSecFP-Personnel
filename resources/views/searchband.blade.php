@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <title>Personnel • Sign In</title>
+        <title>Personnel • Search</title>
         @include('layout.partials.head')
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/home-search.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/home-search.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/button.css') }}">
     </head>
     <body>
         <div class="container-fluid d-flex w-100 h-100 flex-column">

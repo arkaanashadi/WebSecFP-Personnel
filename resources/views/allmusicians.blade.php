@@ -3,7 +3,8 @@
     <head>
         <title>Personnel • Search</title>
         @include('layout.partials.head')
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/search-result.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/search-result.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/button.css') }}">
         <style type="text/css">body {background-image: url('img/bgimg/sign.jpg');}</style>
     </head>
     <body>

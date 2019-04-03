@@ -3,7 +3,8 @@
     <head>
         <title>Personnel • Sign In</title>
         @include('layout.partials.head')
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/forms.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/forms.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/button.css') }}">
         <style>body{background-image: url(bgimg/sign.jpg);}</style>
     </head>
     <body>

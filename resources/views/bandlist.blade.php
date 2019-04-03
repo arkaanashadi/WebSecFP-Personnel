@@ -3,7 +3,8 @@
     <head>
         <title>Personnel • {{ $band -> bandname }}</title>
         @include('layout.partials.head')
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/profile.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/profile.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/button.css') }}">
     </head>
     <body>
         <div class="container-fluid d-flex w-100 h-100 flex-column">
@@ -128,7 +129,7 @@
                     </div>
                 </div>
             </main>
-            <a href="modifyband"><button>Edit Profile</button></a>
+            <a href="modifyband"><button class="btn btn-lg btn-primary btn-block">Edit Profile</button></a>
             @include('layout.partials.footer')
         </div>
     </body>

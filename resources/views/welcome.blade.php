@@ -3,7 +3,7 @@
     <head>
         <title>Personnel • Home</title>
         @include('layout.partials.head')
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/home-search.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/home-search.css') }}">
     </head>
     
     <body>

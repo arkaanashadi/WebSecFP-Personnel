@@ -3,7 +3,8 @@
     <head>
         <title>Personnel • Sign Up</title>
         @include('layout.partials.head')
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/forms.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/forms.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/button.css') }}">
         <style>
 		body{background-image: url(img/bgimg/sign.jpg);
             -webkit-background-size: cover;

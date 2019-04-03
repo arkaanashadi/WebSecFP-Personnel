@@ -1,11 +1,18 @@
-<!-- Featured Musicians-->
 <div class="container-fluid" style="padding: 70px; background-image: url(img/bgimg/home-musicians.jpg) ; padding-top: 70px; ">
+
+    <!-- Featured Musicians -->
     <h1 style="color: white;">Featured Musicians</h1>
+
+    <!-- Card deck containing featured musicians -->
     <div class="card-deck">
+
+    <!-- Loop that will load 3 featured musicians -->
     @foreach ($musicians as $key => $musician)
-    @if ($key == 3)
-        @break
-    @endif
+        @if ($key == 3)
+            @break
+        @endif
+
+        <!-- card displaying a featured musician -->
         <div class="card">
             <img class="card-img-top" src="{{ $musician->img }}">
             <div class="card-body ">
@@ -24,11 +31,16 @@
 <!-- Featured Bands-->
 <div class="container-fluid" style="padding: 70px; background-image: url(img/bgimg/home-bands.jpg) ; padding-top: 70px; ">
     <h1 style="color: white;">Featured Bands</h1>
+
+    <!-- Card deck containing featured bands -->
     <div class="card-deck">
+
+    <!-- Loop that will load 3 featured bands -->
     @foreach ($bands as $key => $band)
     @if ($key == 3)
         @break
     @endif
+        <!-- card containing a featured band -->
         <div class="card">
             <img class="card-img-top" src="{{ $band->img }}">
             <div class="card-body">
