@@ -16,7 +16,7 @@
                         <div class="col-md-4" style="padding: 30px;">
                             <h3>{{ $band -> bandname }}</h3>
                             <div class="container">
-                                <img class="img-fluid" src="../{{ $band->img }}" style="object-fit: cover; height: 400px;">
+                                <img class="img-fluid" src="{{ $band->img }}" style="object-fit: cover; height: 400px;">
                             </div>
                         </div>
 
@@ -128,6 +128,7 @@
                     </div>
                 </div>
             </main>
+            <a href="modifyband"><button>Edit Profile</button></a>
             @include('layout.partials.footer')
         </div>
     </body>

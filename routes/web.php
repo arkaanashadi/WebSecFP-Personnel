@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
     //Public Index
-    Route::get('/', ['uses' => 'Admin\HomeCrudController@publicIndex']);
-    Route::get('/allbands', ['uses' => 'Admin\HomeCrudController@MusicianSearchIndex']);
-    Route::get('/allmusicians', ['uses' => 'Admin\HomeCrudController@BandSearchIndex']);
+Route::get('/', ['uses' => 'Admin\HomeCrudController@publicIndex']);
+Route::post('/allmusicians', ['uses' => 'Admin\HomeCrudController@musicianindex']);
+Route::post('/allbands', ['uses' => 'Admin\HomeCrudController@bandindex']);
 
 //Home Controllers
 Route::get('/signin', ['uses' => 'Admin\HomeCrudController@signin']);
@@ -32,6 +32,7 @@ Route::get('/searchband', ['uses' => 'Admin\HomeCrudController@searchband']);
 
 //Profile Controllers
 Route::get('/profile/{username}', 'Admin\ProfileCrudController@getprofile')->name('profile.show');
+Route::get('/band/{bandname}', 'Admin\ProfileCrudController@getband')->name('band.show');
 
 // Musician Controllers
 Route::get('/musician', ['uses' => 'Admin\MusicianCrudController@profile']);
@@ -39,12 +40,12 @@ Route::post('/submitLogin', ['uses' => 'Admin\MusicianCrudController@login']);
 Route::post('/profileaddsave', ['uses' => 'Admin\ProfileCrudController@profileaddsave']);
 
 // Band Controllers
-// Route::get('/band', ['uses' => 'Admin\BandCrudController@profile']);
-// Route::post('/submitLogin', ['uses' => 'Admin\BandCrudController@login']);
-// Route::post('/bandaddsave', ['uses' => 'Admin\BandController@bandaddsave']);
+Route::get('/band', ['uses' => 'Admin\BandCrudController@profile']);
+Route::post('/submitbandLogin', ['uses' => 'Admin\BandCrudController@login']);
+Route::post('/bandaddsave', ['uses' => 'Admin\ProfileCrudController@bandaddsave']);
 
 // Profile edit
 Route::get('/modifymusician', ['uses' => 'Admin\MusicianCrudController@modifymusician']);
 Route::post('/musicianupdate', ['uses' => 'Admin\MusicianCrudController@musicianupdate']);
-// Route::get('/modifyband', ['uses' => 'Admin\MusicianCrudController@modifyband']);
-// Route::post('/bandupdate', ['uses' => 'Admin\MusicianCrudController@bandupdate']);
+Route::get('/modifyband', ['uses' => 'Admin\BandCrudController@modifyband']);
+Route::post('/bandupdate', ['uses' => 'Admin\BandCrudController@bandupdate']);

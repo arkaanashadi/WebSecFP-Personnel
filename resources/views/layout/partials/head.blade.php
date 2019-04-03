@@ -4,7 +4,7 @@
 <!--- Bootstrap --->
 
 <!-- Local -->
-<link href="{{ asset('/css/bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ secure_asset('/css/bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
 
 <!-- Internet -->
 
@@ -20,10 +20,10 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
 <!-- Laravel Styles -->
-<link rel="stylesheet" type="text/css" href="{{ asset('/css/laravel.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/laravel.css') }}" />
 
 <!-- Website icon -->
-<link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
+<link rel="shortcut icon" href="{{ secure_asset('img/favicon.ico') }}">
 
 <!-- Styles -->
 <style type="text/css">
@@ -97,6 +97,6 @@
 	}
 	
 	.card {
-    background-color: rgba(50,50,50, 0.5);
+    background-color: rgba(50,50,50, 0.75);
 	}
 </style>

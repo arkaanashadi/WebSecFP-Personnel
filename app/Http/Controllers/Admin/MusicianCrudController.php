@@ -133,6 +133,7 @@ class MusicianCrudController extends CrudController
                 'genre3' => $request->genre3,
                 'genre4' => $request->genre4,
                 'password' => $password,
+                'img' => 'img/profile/band/blank.png',
             ];
 
             $update = Musician::where('id', (Session::get('id')))->update($data);

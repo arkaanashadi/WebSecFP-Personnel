@@ -36,7 +36,7 @@
 
 						<!-- Musician sign up form -->
 						<!-- ACTION NEEDS TO BE FILLED IN -->
-							{{ Form::open(array('action' => 'Admin\ProfileCrudController@profileaddsave')) }}<br>
+						{{ Form::open(array('action' => 'Admin\ProfileCrudController@profileaddsave')) }}<br>
 							<input type="text" class="form-control" placeholder="Username" name="username" required autofocus><br>
 							<input type="email" class="form-control" placeholder="Email address" name="email" required><br>
 							<input type="password" class="form-control" placeholder="Password" name="password" required><br>
@@ -48,7 +48,7 @@
 
 						<!-- Band sign up form -->
 						<!-- ACTION NEEDS TO BE FILLED IN -->
-						<form action="" method=""><br>
+						{{ Form::open(array('action' => 'Admin\ProfileCrudController@bandaddsave')) }}<br>
 							<input type="text" class="form-control" placeholder="Band name" name="bandname" required autofocus><br>
 							<input type="email" class="form-control" placeholder="Email address" name="email" required><br>
 							<input type="password" class="form-control" placeholder="Password" name="password" required><br>

@@ -30,6 +30,20 @@ class ProfileCrudController extends CrudController
         }
     }
 
+    public function getband($bandname)	
+    {
+        $band = Band::wherebandname($bandname)->first();
+
+        if($band)
+        {
+            return view("otherbandlist", ["band"=>$band]);
+        }
+        else
+        {
+            dd($band);
+        }
+    }
+
     public function profileaddsave(Request $request)
     {
         $passwordreg = sha1($request->input('password'));
@@ -38,25 +52,29 @@ class ProfileCrudController extends CrudController
             'email' => $request->input('email'),
             'password' => $passwordreg,
         ];
+        Musician::create($mregdata);
+        $newmusician = Musician::all()->where('email', $request->input('email'))->where('password', $passwordreg);
+        $request->session()->put('musicianemail', $newmusician->first()->email);
+        $request->session()->put('id', $newmusician->first()->id);
+        $request->session()->put('username', $newmusician->first()->username);
+        $musician = Musician::whereid(Session::get('id'))->first();
+        return view('modifymusician', ['musician' => $musician]);
+    }
+
+    public function bandaddsave(Request $request)
+    {
+        $passwordreg = sha1($request->input('password'));
         $bregdata = [
-            'username' => $request->input('username'),
+            'bandname' => $request->input('bandname'),
             'email' => $request->input('email'),
             'password' => $passwordreg,
         ];
-        if($request->input('username') != '')
-        {
-			Musician::create($mregdata);
-            $newmusician = Musician::all()->where('email', $request->input('email'))->where('password', $passwordreg);
-            $request->session()->put('musicianemail', $newmusician->first()->email);
-            $request->session()->put('id', $newmusician->first()->id);
-            $request->session()->put('username', $newmusician->first()->username);
-            $musician = Musician::whereid(Session::get('id'))->first();
-            return view('modifymusician', ['musician' => $musician]);
-        }
-        else
-        {
-			Band::create($bregdata);
-			return Redirect::to("modifyband");
-        }
+        Band::create($bregdata);
+        $newband = Band::all()->where('email', $request->input('email'))->where('password', $passwordreg);
+        $request->session()->put('bandemail', $newband->first()->email);
+        $request->session()->put('id', $newband->first()->id);
+        $request->session()->put('bandname', $newband->first()->bandname);
+        $band = Band::whereid(Session::get('id'))->first();
+        return view('modifyband', ['band' => $band]);
     }
 }

@@ -19,7 +19,12 @@ class Band extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ['band_id','bandname','email','password'];
+    protected $fillable = [
+        'band_id','bandname','email','password',
+        'biography','img','twitter','phone','instagram',
+        'youtube','website', 'genre', 'experience', 'facebook',
+        'member1','member2', 'member3','member4','role1','role2','role3','role4',
+    ];
     // protected $hidden = [];
     // protected $dates = [];
 

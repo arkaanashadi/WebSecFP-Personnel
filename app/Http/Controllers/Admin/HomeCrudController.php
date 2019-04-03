@@ -71,10 +71,34 @@ class HomeCrudController extends CrudController
     public function publicIndex()	
     {
         $musicians = Musician::all();
-        return view('welcome', ['musicians' => $musicians]);
-
         $bands = Band::all();
-        return view('welcome', ['bands' => $bands]);	
+        return view('welcome', ['musicians' => $musicians,'bands' => $bands]);
+    }
+
+    public function searchmusician()	
+    {
+        $musicians = Musician::all();
+        $bands = Band::all();
+        return view('searchmusician', ['musicians' => $musicians,'bands' => $bands]);
+    }
+
+    public function searchband()	
+    {
+        $musicians = Musician::all();
+        $bands = Band::all();
+        return view('searchband', ['musicians' => $musicians,'bands' => $bands]);
+    }
+
+    public function musicianindex(Request $request)
+    {
+        $musicians = Musician::all();
+        return view('allmusicians', ['musicians' => $musicians]);
+    }
+    
+    public function bandindex(Request $request)
+    {
+        $bands = Band::all();
+        return view('allbands', ['bands' => $bands]);
     }
 
     public function signin()	

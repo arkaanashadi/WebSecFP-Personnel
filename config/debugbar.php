@@ -14,7 +14,7 @@ return [
      |
      */
 
-    'enabled' => env('DEBUGBAR_ENABLED', null),
+    'enabled' => false,
     'except' => [
         'telescope*'
     ],
@@ -32,7 +32,7 @@ return [
      |
      */
     'storage' => [
-        'enabled'    => true,
+        'enabled'    => null,
         'driver'     => 'file', // redis, file, pdo, custom
         'path'       => storage_path('debugbar'), // For file driver
         'connection' => null,   // Leave null for default connection (Redis/PDO)
@@ -53,7 +53,7 @@ return [
      |
      */
 
-    'include_vendors' => true,
+    'include_vendors' => null,
 
     /*
      |--------------------------------------------------------------------------
@@ -175,7 +175,7 @@ return [
      |
      */
 
-    'inject' => true,
+    'inject' => false,
 
     /*
      |--------------------------------------------------------------------------

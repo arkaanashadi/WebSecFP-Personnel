@@ -22,7 +22,7 @@ class Musician extends Model
     protected $fillable = [
         'musician_id','username','email','password',
         'biography','img', 'twitter','phone','instagram',
-        'youtube','website','biography','skill1','skill2',
+        'youtube','website','skill1','skill2',
         'skill3','skill4','level1','level2','level3','level4',
         'genre1','genre2','genre3','genre4'
     ];

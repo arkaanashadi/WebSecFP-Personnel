@@ -12,7 +12,7 @@
         <main role="main" class="inner cover">
 
         <!-- Search -->
-        <div class="container-fluid search-home row full-height" style="min-height: 100px;">
+        <div class="container-fluid search-home row " style="min-height: 100px;">
 
             <!-- Left column, search for musician -->
             <div class="col-md-6 col-12" style="padding: 0px;">

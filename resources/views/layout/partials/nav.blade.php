@@ -10,22 +10,22 @@
             @if(session()->has('id'))
                 @if(session()->has('musicianemail'))
                 <li class="nav-item">
-                    <a class="nav-link" href="musician">{{ Session::get('username') }}</a>
+                    <a class="nav-link" href="{{ url('musician') }}">{{ Session::get('username') }}</a>
                 </li>
                 @elseif(session()->has('bandemail'))
                 <li class="nav-item">
-                    <a class="nav-link" href="band">Profile</a>
+                    <a class="nav-link" href="{{ url('band') }}">{{ Session::get('bandname') }}</a>
                 </li>
                 @endif
                 <li class="nav-item">
-                    <a class="nav-link" href="signout">Sign Out</a>
+                    <a class="nav-link" href="{{ url('signout') }}">Sign Out</a>
                 </li>
                 @else 
                 <li class="nav-item">
-                    <a class="nav-link" href="signin">Sign In</a>
+                    <a class="nav-link" href="{{ url('signin') }}">Sign In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="signup">Sign Up</a>
+                    <a class="nav-link" href="{{ url('signup') }}">Sign Up</a>
                 </li>
             @endif
             </ul>
