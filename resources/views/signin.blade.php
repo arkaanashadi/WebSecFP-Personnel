@@ -5,7 +5,7 @@
         @include('layout.partials.head')
         <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/forms.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ secure_asset('/css/button.css') }}">
-        <style>body{background-image: url(bgimg/sign.jpg);}</style>
+        <style>body{background-image: url(img/bgimg/sign.jpg);}</style>
     </head>
     <body>
 		<div class="container-fluid d-flex w-100 h-100 flex-column">
