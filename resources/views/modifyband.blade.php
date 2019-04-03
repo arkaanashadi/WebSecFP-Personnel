@@ -37,7 +37,6 @@
                         <!-- Info -->
                         <div class="col-md-8 info" style="padding: 30px;">
 
-                            <!-- TO BE FILLED -->
                             {{ Form::open(array('action' => 'Admin\BandCrudController@bandupdate')) }}
                             <!-- Members, Genre, and Experience -->
                                 <div class="row">
@@ -157,11 +156,3 @@
         </div>
     </body>
 </html>
-
-<!-- =================change name and verification======================= -->
-
-<!-- Band name: {{ Form::text('bandname', "$band->bandname", array("placeholder" => "Username", "required" => "")) }} -->
-
-<!-- New Password: {{ Form::password('newbandpassword', array("placeholder" => "Password")) }}<br>
-Verify this is you: {{ Form::password('bandpassword', array("placeholder" => "Enter your password", "required" => "")) }} -->
-

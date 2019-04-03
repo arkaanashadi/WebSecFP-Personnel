@@ -36,7 +36,6 @@
 					<div class="tab-pane fade show active" id="musician" role="tabpanel" aria-labelledby="musician-tab">
 
 						<!-- Musician sign up form -->
-						<!-- ACTION NEEDS TO BE FILLED IN -->
 						{{ Form::open(array('action' => 'Admin\ProfileCrudController@profileaddsave')) }}<br>
 							<input type="text" class="form-control" placeholder="Username" name="username" required autofocus><br>
 							<input type="email" class="form-control" placeholder="Email address" name="email" required><br>
@@ -48,7 +47,6 @@
 					<div class="tab-pane fade" id="band" role="tabpanel" aria-labelledby="band-tab">
 
 						<!-- Band sign up form -->
-						<!-- ACTION NEEDS TO BE FILLED IN -->
 						{{ Form::open(array('action' => 'Admin\ProfileCrudController@bandaddsave')) }}<br>
 							<input type="text" class="form-control" placeholder="Band name" name="bandname" required autofocus><br>
 							<input type="email" class="form-control" placeholder="Email address" name="email" required><br>

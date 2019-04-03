@@ -16,7 +16,6 @@
                 <div class="container-fluid search-home row" style="background-image: url('img/bgimg/home-left.jpeg');">
                     <div class="container yx-auto" style="background-color: rgba(0,0,0,0.6); padding: 30px; ">
 
-                        <!-- Form needs to be filled out -->
                         {{ Form::open(array('action' => 'Admin\HomeCrudController@musicianindex')) }}<br>
                             <h1 style="text-align: center;">Look for Musician</h1>
 
