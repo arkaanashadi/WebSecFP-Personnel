@@ -37,7 +37,11 @@
                                 <div class="card-body ">
 
                                         <!-- Name -->
-                                        <h5 class="card-title">{{ $band->bandname }}</h5>
+                                        @if ($band->bandname == Session::get('bandname'))
+                                            <h5 class="card-title"><a style="color: White;" href="band">{{ $band->bandname }}</a></h5>
+                                        @else
+                                            <h5 class="card-title"><a style="color: White;" href="{{ route('band.show',$band->bandname) }}">{{ $band->bandname }}</a></h5>
+                                        @endif
                                         <dl class="row">
 
                                             <!-- Genre -->
